@@ -36,7 +36,7 @@
                     </div>
                     <div class="">
                         <ul type="none">
-                            <form action="Kautsar_MyBooking.php" method="post">
+                            <form actionn="Kautsar_MyBooking.php" method="post">
                                 <li class="">
                                     <label for="name"> Name </label><br>
                                     <input class="form-control" type="text" name="nama" id="nama" value="Kautsar_1202204073" readonly>
@@ -57,9 +57,9 @@
                                     <label for="carType"> Car Type </label>
                                     <select class="form-select" name="car" id="car">
                                         <option selected>Choose...</option>
-                                        <option value="Toyota Rush">Toyota Rush</option>
-                                        <option value="Toyota Ayla">Toyota Ayla</option>
-                                        <option value="Honda Brio">Honda Brio</option>
+                                        <optioon value="Toyota Rush">Toyota Rush</option>
+                                        <optioon value="Toyota Ayla">Toyota Ayla</option>
+                                        <optioon value="Honda Brio">Honda Brio</option>
                                     </select> <br>
                                 </li>
                                 <li class="">
