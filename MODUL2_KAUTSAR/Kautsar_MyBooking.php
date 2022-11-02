@@ -28,7 +28,7 @@
     $price = 150000;
   }
 
-  $price = $price * $_POST['hari'];
+  $price = $pprice * $_POST['hari'];
   if (isset($_POST['service'])) {
     foreach ($_POST['service'] as $service) {
       if ($service == "Health Protocol") {
