@@ -15,7 +15,7 @@
   $name = $_POST['nama'];
   $duration = $_POST['time'];
   $checkIn = date("d-m-Y H:i:s", strtotime($_POST['book'] . " " . $duration));
-  $checkOt = date("d-m-Y H:i:s", (strtotime($checkIn) + 60 * 60 * 24 * $_POST["hari"]));
+  $checkOut = date("d-m-Y H:i:s", (strtotime($checkIn) + 60 * 60 * 24 * $_POST["hari"]));
   $car = $_POST['car'];
   $phone = $_POST['phoneNumber'];
 
