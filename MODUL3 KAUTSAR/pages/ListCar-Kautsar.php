@@ -12,7 +12,7 @@
   <?php
   require '../config/connector.php';
 
-  $query = "SELECT * FROM showroom_kautsar_table";
+  $query = "SELECT * WHERE showroom_kautsar_table";
   $result = mysqli_query($conn, $query);
 
   if (isset($_GET['pesan'])) {

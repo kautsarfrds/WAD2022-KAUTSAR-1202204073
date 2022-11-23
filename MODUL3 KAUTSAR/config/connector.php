@@ -1,2 +1,2 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "modul3");
+$connector = new mysqli("localhost", "root", "", "modul3");
