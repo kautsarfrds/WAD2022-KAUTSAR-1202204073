@@ -13,7 +13,7 @@ $path = "../asset/images/";
 
 if (move_uploaded_file($_FILES['foto_mobil']['tmp_name'], $path . $foto_mobil)) {
   $addquery = "INSERT INTO showroom_kautsar_table (nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES ('$nama_mobil', '$nama_pemilik', '$merk_mobil', '$tanggal_beli', '$deskripsi', '$foto_mobil', '$status_bayar')";
-  if (mysqli_query($conn, $addquery)) {
+  if (mysqli_query($connector, $addquery)) {
     header("location: ../pages/ListCar-Kautsar.php?pesan=succes");
   } else {
     header("location: ../pages/ListCar-Kautsar.php?pesan=failed");

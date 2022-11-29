@@ -2,34 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edit Car</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Car</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
-  <?php
+    <?php
   require '../config/connector.php';
 
   $id = $_GET['id'];
 
   $sql = "SELECT * FROM showroom_kautsar_table WHERE id_mobil = $id";
 
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($connector, $sql);
   ?>
-  <nav class="navbar navbar-expand-lg bg-primary">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <a class="navbar-nav gap-3" href="../index.php">Home</a>
-        <a class="nav-link" style="color: white;" href="#">MyCar</a>
-      </div>
-    </div>
-    </div>
-  </nav>
-  <section id='detail' style="padding-top: 50px; padding-bottom: 50px;">
-    <div class="container">
-      <?php
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <a class="navbar-nav gap-3" href="../index.php">Home</a>
+                <a class="nav-link" style="color: white;" href="#">MyCar</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <section id='detail' style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="container">
+            <?php
       while ($detail = mysqli_fetch_array($result)) {
         echo "
                 <h1 style='font-family: 'Raleway'; font-style: normal; font-weight: 700; font-size: 32px; line-height: 38px;'>" . $detail["nama_mobil"] . "</h1>
@@ -76,9 +77,11 @@
             ";
       }
       ?>
-    </div>
-  </section>
-  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        </div>
+    </section>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
   require './config/connector.php';
 
   $query = "SELECT * FROM showroom_kautsar_table";
-  $result = mysqli_query($conn, $query);
+  $result = mysqli_query($connector, $query);
 
   ?>
     <nav class="navbar navbar-expand-lg bg-primary">
