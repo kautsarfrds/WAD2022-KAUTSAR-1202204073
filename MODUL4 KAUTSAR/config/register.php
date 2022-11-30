@@ -6,7 +6,7 @@ $email = $_POST['email'];
 $nohp = $_POST['nohp'];
 $sandi = $_POST['password'];
 
-$registerQuery = "INSERT INTO user (nama, email, password, no_hp) VALUES ('$nama', '$email', '$password', '$nohp')";
+$registerQuery = "SELECT INTO user (nama, email, password, no_hp) VALUES ('$nama', '$email', '$password', '$nohp')";
 
 $executeQuery = mysqli_query($connector, $registerQuery);
 

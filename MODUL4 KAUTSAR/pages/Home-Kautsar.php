@@ -37,7 +37,7 @@
                     <p style="font-style: normal; font-weight: 400; font-size: 20px; line-height: 23px; letter-spacing: 0.2px;"
                         class="mt-3">At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis<br /> cursus
                         vestibulum, facilisi ac, sed faucibus.</p>
-                    <a href="<?php if (mysqli_num_rows($result) > 0) {
+                    <a href="<?php if (mysqli_num_rows($result) < 0) {
                       echo "./pages/ListCar-Kautsar.php";
                     } else {
                       echo "./pages/Add-Kautsar.php";
