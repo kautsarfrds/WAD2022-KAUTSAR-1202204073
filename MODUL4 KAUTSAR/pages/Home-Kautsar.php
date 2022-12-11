@@ -11,7 +11,7 @@
 
 <body>
     <?php
-  require './config/connector.php';
+  require '../config/connector.php';
 
   $query = "SELECT * FROM showroom_kautsar_table";
   $result = mysqli_query($connector, $query);
@@ -23,7 +23,7 @@
                 <div class="navbar-nav gap-3">
                     <a class="nav-link" style="color: white;" href="#home">Home</a>
                 </div>
-                <a class="nav-link" style="color: white;" href="./pages/Login-Kautsar.php">Login</a>
+                <a class="nav-link" style="color: white;" href="../pages/Login-Kautsar.php">Login</a>
             </div>
         </div>
     </nav>
@@ -45,11 +45,11 @@
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; width: 137px; height: 51px; background: #3563e9; border-radius: 5px; border: none; color: white; margin-top: 40px; text-decoration: none;"
                         class="button btn-primary">MyCar</a>
                     <div class="d-flex align-items-center gap-5 mt-5">
-                        <img src="./asset/images/logo-ead.png" alt="logo" style="width:100px;">
+                        <img src="../asset/images/logo-ead.png" alt="logo" style="width:100px;">
                         <p style="margin-top: 20px; font-size:14px;">Kautsar_1202204073</p>
                     </div>
                 </div>
-                <img src="./asset/images/hero.png" alt="hero">
+                <img src="../asset/images/hero.png" alt="hero">
             </div>
         </div>
     </section>

@@ -10,20 +10,13 @@
 </head>
 
 <body>
-    <?php
-  require '../config/connector.php';
-
-  $query = "SELECT * FROM showroom_kautsar_table";
-  $result = mysqli_query($connector, $query);
-
-  ?>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container">
             <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav gap-3">
                     <a class="nav-link" style="color: white;" href="#home">Home</a>
-                    <a class="nav-link" style="color: white;" href="#">MyCar</a>
-                    <a class="navbar-expand-lg" href="Add-Kautsar.php"
+                    <a class="nav-link" style="color: white;" href="/listcar">MyCar</a>
+                    <a class="navbar-expand-lg" href="/add"
                         style="background-color: white; color:blue; border-radius: 5px; text-decoration: none; width: 110px; height: 35px; display:flex; justify-content:center; align-items:center; font-weight:500;">Add
                         Car</a>
                 </div>
@@ -36,8 +29,8 @@
                         Nama
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./Profile-Kautsar.php">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/login">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,19 +46,15 @@
                     <p style="font-style: normal; font-weight: 400; font-size: 20px; line-height: 23px; letter-spacing: 0.2px;"
                         class="mt-3">At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis<br /> cursus
                         vestibulum, facilisi ac, sed faucibus.</p>
-                    <a href="<?php if (mysqli_num_rows($result) > 0) {
-                      echo "./ListCar-Kautsar.php";
-                    } else {
-                      echo "./pages/Add-Kautsar.php";
-                    } ?>"
+                    <a href="/listcar"
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; width: 137px; height: 51px; background: #3563e9; border-radius: 5px; border: none; color: white; margin-top: 40px; text-decoration: none;"
                         class="button btn-primary">MyCar</a>
                     <div class="d-flex align-items-center gap-5 mt-5">
-                        <img src="../asset/images/logo-ead.png" alt="logo" style="width:100px;">
+                        <img src="img/logo-ead.png" alt="logo" style="width:100px;">
                         <p style="margin-top: 20px; font-size:14px;">Kautsar_1202204073</p>
                     </div>
                 </div>
-                <img src="../asset/images/hero.png" alt="hero">
+                <img src="/img/hero.png" alt="hero">
             </div>
         </div>
     </section>

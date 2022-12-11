@@ -10,20 +10,13 @@
 </head>
 
 <body>
-    <?php
-  require '../config/connector.php';
-
-  $query = "SELECT * FROM showroom_kautsar_table";
-  $result = mysqli_query($connector, $query);
-
-  ?>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav gap-3">
                     <a class="nav-link" style="color: #e0e0e0; font-weight: 600;"
-                        href="../pages/Homeafter-Kautsar.php">Home</a>
-                    <a class="nav-link" style="color: white;" href="#">MyCar</a>
+                        href="/">Home</a>
+                    <a class="nav-link" style="color: white;" href="/listcar">MyCar</a>
                 </div>
             </div>
         </div>

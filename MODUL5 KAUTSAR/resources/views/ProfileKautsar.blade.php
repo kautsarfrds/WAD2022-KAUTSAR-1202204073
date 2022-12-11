@@ -15,20 +15,20 @@
             <h1 class="titleInsert" align="center">Profile</h1>
             <form enctype="multipart/form-data" method="POST" action="../config/update.php" class="form-input"
                 name="form-edit">
-                <input type="hidden" name="id" value="<?php echo $_SESSION['email'];?>">
-                <input type="hidden" name="id" value="<?php echo $dataUser['id'];?>">
+                <input type="hidden" name="id" value="">
+                <input type="hidden" name="id" value="">
                 <div class="mb-3">
                     <label for="inputNamaMobil" class="form-label">Email</label>
-                    <input type="text" class="form-control" value="<?php echo $dataUser['email'];?>" name="email" />
+                    <input type="text" class="form-control" value="" name="email" />
                 </div>
                 <div class="mb-3">
                     <label for="inputNamaPemilik" class="form-label">Nama</label>
-                    <input type="text" class="form-control" value="<?php echo $dataUser['nama'];?>" name="nama"
+                    <input type="text" class="form-control" value="" name="nama"
                         required />
                 </div>
                 <div class="mb-3">
                     <label for="inputMerk" class="form-label">Nomor handphone</label>
-                    <input type="text" class="form-control" value="<?php echo $dataUser['no_hp'];?>" name="no_hp"
+                    <input type="text" class="form-control" value="" name="no_hp"
                         required />
                 </div>
 
@@ -49,30 +49,10 @@
             </form>
         </div>
     </section>
-    <!-- End Form -->
-    <div class="container">
-        <div class="d-flex align-items-center gap-5 mt-5" align="center">
-            <img src="<?php echo "../asset/images/logo-ead.png" ?>" alt="logoead" style="width:100px;">
-            <p style="margin-top: 20px; font-size:15px;">Rio_1202200020</p>
-        </div>
+    <div class="d-flex align-items-center gap-5 mt-5" style="margin-top:50px ">
+        <img src="/img/logo-ead.png" alt="logo" style="width:100px;">
+        <p style="margin-top: 20px; font-size:14px;">Kautsar_1202204073</p>
     </div>
-
-    <!-- Footer Start -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="container footer-bottom clearfix">
-                        <div class="copyright text-center">
-                            &copy; Copyright <strong><span>Muh Ario Adriansyah Wuleho</span></strong>. All Rights
-                            Reserved
-                        </div>
-                        <div class="credits text-center">
-                            Created by <a href="https://github.com/madrioo">Muh Ario Adriansyah
-                                Wuleho_1202200020_SI4402</a>
-                        </div>
-                    </div>
-    </footer>
 </body>
 
 </html>
