@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-</head>
+@extends('header')
+@section('content')
 
 <body>
     <section id="insert">
         <div class="container insert">
 
             <h1 class="titleInsert" align="center">Profile</h1>
-            <form enctype="multipart/form-data" method="POST" action="../config/update.php" class="form-input"
-                name="form-edit">
+            <form action="{{ route('profile_action') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <input type="hidden" name="id" value="">
-                <input type="hidden" name="id" value="">
-                <div class="mb-3">
-                    <label for="inputNamaMobil" class="form-label">Email</label>
-                    <input type="text" class="form-control" value="" name="email" />
+                <div class="row mb-3">
+                    <label for="inputEmail3" name="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10" name="email" disabled>
+                        {{ Auth::user()->email }} 
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputNamaPemilik" class="form-label">Nama</label>
-                    <input type="text" class="form-control" value="" name="nama"
-                        required />
+                <div class="row mb-3">
+                    <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="nama" class="form-control" value="{{ Auth::user()->nama }}" >
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputMerk" class="form-label">Nomor handphone</label>
-                    <input type="text" class="form-control" value="" name="no_hp"
-                        required />
+                <div class="row mb-3">
+                    <label for="No HP" class="col-sm-2 col-form-label">No Handphone</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="no_hp" class="form-control" value="{{ Auth::user()->no_hp }}" >
+                    </div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="inputTanggalBeli" class="form-label">Kata sandi</label>
-                    <input type="password" class="form-control" name="password" placeholder="masukan kata sandi..."
-                        required />
+                <div class="row mb-3">
+                    <label for="Kata Sandi" class="col-sm-2 col-form-label">Kata Sandi</label>
+                    <div class="col-sm-10">
+                    <input type="password" name="password_baru" class="form-control"  value="">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputMerk" class="form-label">Konfirmasi password</label>
-                    <input type="password" class="form-control" name="konfirmasiPassword"
-                        placeholder="Ulangi kata sandi..." required />
+                <div class="row mb-3">
+                    <label for="Konfirmasi Kata Sandi" class="col-sm-2 col-form-label">Konfirmasi Kata Sandi</label>
+                    <div class="col-sm-10">
+                    <input type="password" name="password_baru_confirmation" class="form-control"  value="">
+                    </div>
                 </div>
-
-                <div class="mb-3 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary" name="btn-update">Update</button>
-                </div>
+                <button type="submit" class="btn btn-primary" name="update">Update</button>
             </form>
         </div>
     </section>
@@ -53,6 +47,4 @@
         <img src="/img/logo-ead.png" alt="logo" style="width:100px;">
         <p style="margin-top: 20px; font-size:14px;">Kautsar_1202204073</p>
     </div>
-</body>
-
-</html>
+@endsection

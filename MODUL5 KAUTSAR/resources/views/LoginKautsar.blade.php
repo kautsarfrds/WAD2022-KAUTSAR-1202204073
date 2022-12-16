@@ -17,9 +17,6 @@
         <div class="col-md-6">
             <section id="form">
                 <div class="container" style="margin-left: 100px; margin-top: 200px;">
-                    <h1
-                        style="font-family: 'Raleway'; font-style: normal; font-weight: 700; font-size: 32px; line-height: 38px;">
-                        Login</h1>
                         <form action="{{ route('LoginKautsar.action') }}" method="POST" class="p-5 vh-150" style="margin-right: 100px;" enctype="multipart/form-data">
                             <input type="hidden" name="id_mobil" >
                             @csrf
@@ -41,7 +38,7 @@
                                 <br>
                                 <button type="submit" name="submit" class="btn btn-primary">Login</button>
                             <br>
-                            Anda belum punya akun? <a href="/preregister">Daftar</a>
+                            Anda belum punya akun? <a href="/RegisterKautsar">Daftar</a>
                         </form>
                 </div>
             </section>

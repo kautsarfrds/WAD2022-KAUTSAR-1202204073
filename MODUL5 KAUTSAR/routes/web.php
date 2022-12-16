@@ -15,7 +15,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('HomeafterKautsar');
+    return view('HomeKautsar');
 });
 
 Route::get('RegisterKautsar', [UserController::class, 'RegisterKautsar'])->name('RegisterKautsar');
@@ -25,4 +25,8 @@ Route::post('LoginKautsar', [UserController::class, 'LoginKautsar_action'])->nam
 Route::get('password', [UserController::class, 'password'])->name('password');
 Route::post('password', [UserController::class, 'password_action'])->name('password.action');
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
+Route::get('profile', [UserController::class, 'profile'])->name('profile');
+
+Route::post('profile', [UserController::class, 'profile_action'])->name('profile_action');
 Route::resource('product', ProductController::class);
+Route::get('ListCarKautsar', [UserController::class, 'ListCarKautsar'])->name('ListCarKautsar');

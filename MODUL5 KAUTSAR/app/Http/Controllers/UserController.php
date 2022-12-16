@@ -54,22 +54,21 @@ class UserController extends Controller
 
     public function profile()
     {
-        return view('main.profile');
+        return view('ProfileKautsar');
     }
 
     public function profile_action(Request $request)
     {   
         
         $request->validate([
-            'name' => 'required',
+            'nama' => 'required',
             'no_hp' => 'required',
-            'new_password' => 'required|confirmed',
-
+            'password_baru' => 'required|confirmed',
         ]);
         $user = User::find(Auth::id());
-        $user->nama = $request->name;
+        $user->nama = $request->nama;
         $user->no_hp = $request->no_hp;
-        $user->password = Hash::make($request->new_password);
+        $user->password = Hash::make($request->password_baru);
         $user->save();
         $request->session()->regenerate();
         return back();
